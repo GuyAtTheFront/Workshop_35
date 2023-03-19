@@ -1,0 +1,25 @@
+<p>game-list works!</p>
+
+<div style="display:flex;">
+    <div style="display:inline-block">
+        <p>Games Per Page</p>
+    </div>
+    <div style="display:inline-block;">
+        <select name="" id="" (change)="onSelect(options.value)" #options>
+            <option *ngFor="let option of selectOptions" [value]="option" [innerText]="option"></option>
+       </select>
+    </div>
+</div>
+
+<div>
+    <app-games-description></app-games-description>
+</div>
+
+<div style="display:flex">
+    <div style="display:inline-block">
+        <button type="button" (click)="onPrevious()" [disabled]="disablePrevious">Previous</button>
+    </div>
+    <div style="display:inline-block">
+        <button type="button" (click)="onNext()">Next</button>
+    </div>
+</div>
